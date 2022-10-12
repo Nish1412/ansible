@@ -11,4 +11,4 @@
         - name: i want to start/stop  install wget
           service: 
                name: apache2
-               state: started
+               state: stopped
