@@ -8,7 +8,7 @@
               name: apache2
               state: present
 
-        - name: i want to install wget
-          apt: 
+        - name: i want to start/stop  install wget
+          service: 
                name: apache2
-               state: present
+               state: started
