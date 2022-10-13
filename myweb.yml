@@ -9,7 +9,7 @@
               state: present
           when: ansible_os_family="Debian"
 
-        - name: i want to start/stop wget
+        - name: i want to start/stop on ubuntu
           service: 
                name: apache2
                state: started
@@ -21,7 +21,7 @@
                 state: started
           when: ansible_os_family="RedHat"
 
-        - name: i want to start/stop webserver
+        - name: i want to start/stop on webserver on RedHat
           service:
                  name: httpd
                  state: started
