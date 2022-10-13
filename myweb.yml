@@ -7,8 +7,23 @@
           apt: 
               name: apache2
               state: present
+          when: ansible_os_family="Debian"
 
-        - name: i want to start/stop  install wget
+        - name: i want to start/stop wget
           service: 
                name: apache2
-               state: stopped
+               state: started
+          when: ansible_os_family="Debian"
+
+        - name: i want to install webserver on RedHat
+          yum:
+                name: httpd
+                state: started
+          when: ansible_os_family="RedHat"
+
+        - name: i want to start/stop webserver
+          service:
+                 name: httpd
+                 state: started
+          when: ansible_os_family="RedHat"       
+                
