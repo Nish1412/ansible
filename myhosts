@@ -1,2 +1,15 @@
+[webserverhost]
 172.31.21.118
 172.31.27.88
+
+[databaseserver]
+172.31.21.169
+172.31.27.69
+
+[networkserver]
+172.31.21.143
+172.31.27.14
+
+[webserverhost:vars]
+mywebserveronubuntu = apache2
+mywebserveronredhat = httpd
